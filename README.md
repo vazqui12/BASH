@@ -11,6 +11,12 @@ El siguiente repositorio consiste en un script en Bash el cuál muestra informac
 
 ## Instalación
 
+Para instalar basta con ejecutar los siguientes comandos:
+
+git clone https://github.com/vazqui12/HTBmachines.git
+cd HTBmachines
+./htbmachines.sh
+
 ## Uso
 
 ## Contribución
