@@ -4,7 +4,7 @@
 
 El siguiente repositorio consiste en un script en Bash el cuál muestra información como:
 - Nombre de la máquina
-- IP de la máquina
+- Dirección IP de la máquina
 - Dificultad de la máquina
 - Sistema Operativo de la máquina
 - Enlace al video explicativo de Youtube
