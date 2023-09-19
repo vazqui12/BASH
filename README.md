@@ -1,6 +1,6 @@
 # HTBmachines
 
-# DESCRIPCIÓN
+## Descripción
 
 El siguiente repositorio consiste en un script en Bash el cuál muestra información como:
 - Nombre de la máquina
@@ -9,11 +9,11 @@ El siguiente repositorio consiste en un script en Bash el cuál muestra informac
 - Sistema Operativo de la máquina
 - Técnica de Hacking a utilizar o explotar
 
-# INSTALACIÓN
+## Instalación
 
-# USO
+## Uso
 
-# CONTRIBUCIÓN
+## Contribución
 
 Si deseas contribuir a este proyecto, sigue estos pasos: 
 
