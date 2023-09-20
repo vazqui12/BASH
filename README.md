@@ -1,6 +1,6 @@
-#🖥️ HTBmachines
+# 🖥️ HTBmachines
 
-##📘 Descripción
+## 📘 Descripción
 
 El siguiente repositorio consiste en un script en Bash el cuál muestra información como:
 - Nombre de la máquina
@@ -10,7 +10,7 @@ El siguiente repositorio consiste en un script en Bash el cuál muestra informac
 - Enlace al video explicativo de Youtube
 - Técnica de Hacking a utilizar o explotar
 
-##🔑 Instalación
+## 🔑 Instalación
 
 Para instalar basta con ejecutar los siguientes comandos:
 
@@ -20,7 +20,7 @@ Para instalar basta con ejecutar los siguientes comandos:
 
 - ./htbmachines.sh
 
-##✋ Uso
+## ✏️ Uso
 Una vez ejecutado el script debería salir un panel de ayuda donde se muestran las diferentes opciones, como se observa a continuación:
 
 Las opciones que podemos ejecutar son las siguientes:
@@ -53,7 +53,7 @@ Las opciones que podemos ejecutar son las siguientes:
 9. Para buscar por dificultad y sistema operativo a la vez:
 ####  ./htbmachines.sh -d <Dificultad de la máquina> -o <Sistema operativo de la máquina>
 
-##💰 Contribución
+## 💰 Contribución
 
 Si deseas contribuir a este proyecto, sigue estos pasos: 
 
