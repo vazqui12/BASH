@@ -15,7 +15,6 @@ El siguiente repositorio consiste en un script en Bash el cuál muestra informac
 - [Instalación](#instalación)
 - [Uso](#uso)
 - [Contribución](#contribución)
-- [Licencia](#licencia)
 
 ## 🔑 Instalación
 
