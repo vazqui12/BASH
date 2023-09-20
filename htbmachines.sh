@@ -31,8 +31,8 @@ function helpPanel(){
 	echo -e "\t${purpleColour}u)${endColour}${grayColour} Descargar o actualizar archivos necesarios${endColour}\n"
 	echo -e "\t${purpleColour}m)${endColour}${grayColour} Buscar por un nombre de maquina${endColour}\n"
 	echo -e "\t${purpleColour}i)${endColour}${grayColour} Buscar por direccion IP${endColour}\n"
-	echo -e "\t${purpleColour}d)${endColour}${grayColour} Buscar por dificultad${endColour}\n"
-	echo -e "\t${purpleColour}o)${endColour}${grayColour} Buscar por sistema operativo${endColour}\n"
+	echo -e "\t${purpleColour}d)${endColour}${grayColour} Buscar por dificultad -->${redColour} Insane${endColour}${grayColour},${endColour}${purpleColour} Difícil${endColour}${grayColour},${endColour}${yellowColour} Media${endColour}${grayColour} o${endColour}${turquoiseColour} Fácil${endColour}\n"\n"
+	echo -e "\t${purpleColour}o)${endColour}${grayColour} Buscar por sistema operativo --> ${greenColour} Linux${endColour}${grayColour} o${endColour}${blueColour} Windows${endColour}\n"
 	echo -e "\t${purpleColour}s)${endColour}${grayColour} Buscar por skill${endColour}\n"
 	echo -e "\t${purpleColour}y)${endColour}${grayColour} Obtener link youtube${endColour}\n"
 	echo -e "\t${purpleColour}h)${endColour}${grayColour} Mostrar este panel de ayuda${endColour}\n"
@@ -118,8 +118,19 @@ function getMachinesDifficulty(){
 	results_check="$(cat bundle.js | grep "dificultad: \"$difficulty\"" -B 5 | grep name | awk 'NF{print $NF}' | tr -d '"' | tr -d ',' | column )"
 
 	if [ "$results_check" ]; then
-		echo -e "\n${yellowColour}[+]${endColour}${grayColour} Mostrando las maquinas que poseen la dificultad${endColour}${blueColour} $difficulty${endColour}${grayColour}:${endColour}\n"
-		cat bundle.js | grep "dificultad: \"$difficulty\"" -B 5 | grep "name: " | awk 'NF{print $NF}' | tr -d '"' | tr -d ',' | column
+		if [ "$difficulty" == "Insane" ]; then
+                        echo -e "\n${yellowColour}[+]${endColour}${grayColour} Mostrando las maquinas que poseen la dificultad${endColour}${redColour} $difficulty${endColour}${grayColour}:${endColour}\n"
+                        cat bundle.js | grep "dificultad: \"$difficulty\"" -B 5 | grep "name: " | awk 'NF{print $NF}' | tr -d '"' | tr -d ',' | column
+                elif [ "$difficulty" == "Difícil" ]; then
+                        echo -e "\n${yellowColour}[+]${endColour}${grayColour} Mostrando las maquinas que poseen la dificultad${endColour}${purpleColour} $difficulty${endColour}${grayColour}:${endColour}\n"
+                        cat bundle.js | grep "dificultad: \"$difficulty\"" -B 5 | grep "name: " | awk 'NF{print $NF}' | tr -d '"' | tr -d ',' | column
+                elif [ "$difficulty" == "Media" ]; then
+                        echo -e "\n${yellowColour}[+]${endColour}${grayColour} Mostrando las maquinas que poseen la dificultad${endColour}${yellowColour} $difficulty${endColour}${grayColour}:${endColour}\n"
+                        cat bundle.js | grep "dificultad: \"$difficulty\"" -B 5 | grep "name: " | awk 'NF{print $NF}' | tr -d '"' | tr -d ',' | column
+                else
+                        echo -e "\n${yellowColour}[+]${endColour}${grayColour} Mostrando las maquinas que poseen la dificultad${endColour}${turquoiseColour} $difficulty${endColour}${grayColour}:${endColour}\n"
+                        cat bundle.js | grep "dificultad: \"$difficulty\"" -B 5 | grep "name: " | awk 'NF{print $NF}' | tr -d '"' | tr -d ',' | column
+                fi
 	else
 		echo -e "\n${redColour}[!] La dificultad proporcionada no existe${endColour}\n"
 	fi
@@ -133,9 +144,13 @@ function getOSMachines(){
 	os_results="$(cat bundle.js | grep "so: \"$os\"" -B 5 | grep "name: " | awk 'NF{print $NF}' | tr -d '"' | tr -d ',' | column)"
 
 	if [ "$os_results" ]; then
-        echo -e "\n${yellowColour}[+]${endColour}${grayColour} Mostrando las maquinas que poseen el sistema operativo${endColour}${blueColour} $os${endColour}${grayColour}:${endColour}\n"
-
-        cat bundle.js | grep "so: \"$os\"" -B 5 | grep "name: " | awk 'NF{print $NF}' | tr -d '"' | tr -d ',' | column 
+        	if [ "$os" == "Linux" ]; then
+                         echo -e "\n${yellowColour}[+]${endColour}${grayColour} Mostrando las maquinas que poseen el sistema operativo${endColour}${greenColour} $os${endColour}${grayColour}:${endColour}\n"
+                         cat bundle.js | grep "so: \"$os\"" -B 5 | grep "name: " | awk 'NF{print $NF}' | tr -d '"' | tr -d ',' | column
+                else
+                        echo -e "\n${yellowColour}[+]${endColour}${grayColour} Mostrando las maquinas que poseen el sistema operativo${endColour}${blueColour} $os${endColour}${grayColour}:${endColour}\n"
+                        cat bundle.js | grep "so: \"$os\"" -B 5 | grep "name: " | awk 'NF{print $NF}' | tr -d '"' | tr -d ',' | column
+                fi
     else
         echo -e "\n${redColour}[!] El sistema operativo proporcionado no existe${endColour}\n"
     fi
