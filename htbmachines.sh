@@ -31,7 +31,7 @@ function helpPanel(){
 	echo -e "\t${purpleColour}u)${endColour}${grayColour} Descargar o actualizar archivos necesarios${endColour}\n"
 	echo -e "\t${purpleColour}m)${endColour}${grayColour} Buscar por un nombre de maquina${endColour}\n"
 	echo -e "\t${purpleColour}i)${endColour}${grayColour} Buscar por direccion IP${endColour}\n"
-	echo -e "\t${purpleColour}d)${endColour}${grayColour} Buscar por dificultad -->${redColour} Insane${endColour}${grayColour},${endColour}${purpleColour} Difícil${endColour}${grayColour},${endColour}${yellowColour} Media${endColour}${grayColour} o${endColour}${turquoiseColour} Fácil${endColour}\n"\n"
+	echo -e "\t${purpleColour}d)${endColour}${grayColour} Buscar por dificultad -->${redColour} Insane${endColour}${grayColour},${endColour}${purpleColour} Difícil${endColour}${grayColour},${endColour}${yellowColour} Media${endColour}${grayColour} o${endColour}${turquoiseColour} Fácil${endColour}\n"
 	echo -e "\t${purpleColour}o)${endColour}${grayColour} Buscar por sistema operativo --> ${greenColour} Linux${endColour}${grayColour} o${endColour}${blueColour} Windows${endColour}\n"
 	echo -e "\t${purpleColour}s)${endColour}${grayColour} Buscar por skill${endColour}\n"
 	echo -e "\t${purpleColour}y)${endColour}${grayColour} Obtener link youtube${endColour}\n"
