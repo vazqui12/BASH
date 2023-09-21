@@ -40,7 +40,7 @@ function helpPanel(){
 
 # Search Machine
 function searchMachine(){
-	machineName="$1" # Usamos el $1 para quedarnos con el valor del primer parámtro pasado por terminal
+	machineName="$1" # Usamos el $1 para quedarnos con el valor del primer parámtro pasado por la terminal
 
 	machineName_checker="$(cat bundle.js | awk "/name: \"$machineName\"/,/resuelta:/" | grep -vE "id:|sku:|resuelta" | tr -d '"' | tr -d ',' | sed 's/^ *//')"
 
