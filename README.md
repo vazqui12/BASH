@@ -10,7 +10,7 @@ El siguiente repositorio consiste en un script en Bash el cuál muestra informac
 - Enlace al video explicativo de Youtube
 - Técnica de Hacking a utilizar o explotar
 
-## Tabla de Contenidos
+## 📑Tabla de Contenidos
 
 - [Instalación](#instalación)
 - [Uso](#uso)
